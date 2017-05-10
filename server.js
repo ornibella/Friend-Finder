@@ -21,7 +21,13 @@ require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 
-
+// (DATA)
+// var friends = []
+// friends[0] = {
+//   name: "",
+//   photo: "",
+//   scores: [i];
+// };
 
 app.listen(PORT, function() {
 	console.log("App listening on PORT " + PORT);
