@@ -1,3 +1,7 @@
+var express = require("express");
+var bodyParser = require("body-parser");
+
+
 // Sets up the Express App
 var app = express();
 var PORT = 3000;
@@ -13,17 +17,18 @@ app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
 
-app.use(htmlRoutes);
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 
 // (DATA)
 var friends = []
-friends[0] ={
+friends[0] = {
   name: "",
   photo: "",
   scores: [i];
 };
 
-app.listen(port, function() {
-	console.log("App listening on PORT " + port);
+app.listen(PORT, function() {
+	console.log("App listening on PORT " + PORT);
 });
